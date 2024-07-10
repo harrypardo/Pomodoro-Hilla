@@ -12,6 +12,12 @@ export default function AboutView() {
       <img style={{ width: '200px' }} src="images/empty-plant.png" />
       <h2>This place intentionally left empty</h2>
       <p>It’s a place where you can grow your own UI 🤗</p>
+
+      Credits:
+
+      Icons:
+      <a href="https://www.flaticon.com/free-icons/google-play-music" title="google play music icons">Google play music icons created by IYAHICON - Flaticon</a>
+      <a href="https://www.flaticon.com/free-icons/stop-button" title="stop button icons">Stop button icons created by Hilmy Abiyyu A. - Flaticon</a>
     </div>
   );
 }

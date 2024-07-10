@@ -10,3 +10,9 @@ declare module 'csstype' {
     [index: `--${string}`]: any;
   }
 }
+
+
+declare module "*.png";
+declare module "*.svg";
+declare module "*.jpeg";
+declare module "*.jpg";
