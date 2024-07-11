@@ -61,7 +61,7 @@ export default function TaskList() {
             theme="primary">Add</Button>
     </div>);
 
-    return (<div>
+    return (<div className="tasklist-container">
 
         <Header />
        <h4>Active:</h4>

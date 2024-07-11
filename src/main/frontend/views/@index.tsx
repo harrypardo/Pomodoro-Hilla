@@ -17,7 +17,11 @@ export default function HelloWorldView() {
     <>
       <section className="flex p-m gap-m items-end">
         <BackgroundVid />
+
+      
         <MusicPlayer />
+ 
+      
         <TaskList />
       </section>
     </>

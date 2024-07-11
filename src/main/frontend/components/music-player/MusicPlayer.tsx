@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import PlayIcon from '../../assets/icons/play.png';
 import StopButton from '../../assets/icons/stop.png';
@@ -8,6 +8,9 @@ import ReactPlayer from 'react-player'
 import StationList from "./StationList";
 import { STATIONS } from "./stations";
 import { Station } from "./types";
+
+import './musicplayer.styles.scss';
+import Draggable from "react-draggable";
 
 export default function MusicPlayer( ) {
 
@@ -21,7 +24,13 @@ export default function MusicPlayer( ) {
         setCurrentStation(station.url);
         setStationKey(station.name);
         setIsPlaying(true);}; 
-    return (<div>
+
+
+     const nodeRef = useRef(null);   
+    return (
+    
+    <Draggable nodeRef={nodeRef}>
+    <div className="musicplayer-container" ref={nodeRef}>
 
             <img src={isPlaying ? StopButton : PlayIcon } 
             width="150px"
@@ -43,6 +52,7 @@ export default function MusicPlayer( ) {
                 }
             }}
         />
-    </div>);
+    </div>
+    </Draggable>);
 
 }

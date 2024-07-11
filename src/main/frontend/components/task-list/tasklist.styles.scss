@@ -12,14 +12,15 @@
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-
+    font-family: Minecraft; 
 
     > p {
         text-align: center;
+       
     }
 
     &:hover {
-        background-color: #2f2348;        
+        background-color: var(--lumo-primary-color-10pct);  
     }
 
     >vaadin-button {
@@ -33,4 +34,10 @@
         text-decoration: line-through;
         text-decoration-color: rgb(112, 27, 27);
     }
+}
+
+
+.tasklist-container {
+    --lumo-font-family: Minecraft;
+    font-family: Minecraft;
 }
