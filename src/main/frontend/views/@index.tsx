@@ -1,6 +1,8 @@
 import { ViewConfig } from '@vaadin/hilla-file-router/types.js';
 
 import MusicPlayer from 'Frontend/components/music-player/MusicPlayer';
+import Clock from 'Frontend/components/pomodoro-timer/Clock';
+import PomodoroClock from 'Frontend/components/pomodoro-timer/PomodoroClock';
 import TaskList from 'Frontend/components/task-list/TaskList';
 import BackgroundVid from 'Frontend/components/video-bg/BackgroundVid';
 
@@ -21,7 +23,7 @@ export default function HelloWorldView() {
       
         <MusicPlayer />
  
-      
+      <PomodoroClock />
         <TaskList />
       </section>
     </>

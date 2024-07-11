@@ -8,7 +8,7 @@ export default function BackgroundVid() {
     return (
 
        
-     <img className='bg-vid-container'  src={PokemonBG}/>
+     <img className='bg-vid-container'  src={PokemonBG} alt='background-image'/>
       
     
     );

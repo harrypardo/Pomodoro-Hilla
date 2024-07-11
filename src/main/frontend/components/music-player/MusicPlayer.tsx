@@ -33,9 +33,9 @@ export default function MusicPlayer( ) {
     <div className="musicplayer-container" ref={nodeRef}>
 
             <img src={isPlaying ? StopButton : PlayIcon } 
-            width="150px"
-            height="150px"
-            
+            width="50px"
+            height="50px"
+            alt="play-button"
             onClick={onClickPlayButton}></img>
 
             <StationList onChangeStation={onChangeStation}/>
