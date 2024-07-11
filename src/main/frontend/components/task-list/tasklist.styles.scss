@@ -1,0 +1,36 @@
+.action-container {
+   display: flex;
+   gap: 10px;
+}
+
+.add-button {
+    align-self: end;
+    cursor: pointer;
+}
+
+.checklist-item {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+
+
+    > p {
+        text-align: center;
+    }
+
+    &:hover {
+        background-color: #2f2348;        
+    }
+
+    >vaadin-button {
+        cursor: pointer;
+    }
+}
+
+.completed-item {
+    > p {
+        text-align: center;
+        text-decoration: line-through;
+        text-decoration-color: rgb(112, 27, 27);
+    }
+}
