@@ -124,7 +124,7 @@
       "workbox-core": "7.1.0",
       "workbox-precaching": "7.1.0"
     },
-    "hash": "bf6aff2d008da56ec0c2e758368ba000ca17f7157fc3f36d837fd282e4e38110"
+    "hash": "56b9d86f9c30e80be3e5c0e74fc11826b92590ab2826b515ac20a7870d691ea6"
   },
   "overrides": {
     "@vaadin/bundles": "$@vaadin/bundles",
@@ -165,6 +165,7 @@
     "@vaadin/vaadin-themable-mixin": "$@vaadin/vaadin-themable-mixin",
     "@vaadin/vaadin-lumo-styles": "$@vaadin/vaadin-lumo-styles",
     "@vaadin/vaadin-material-styles": "$@vaadin/vaadin-material-styles",
-    "react-player": "$react-player"
+    "react-player": "$react-player",
+    "react-draggable": "$react-draggable"
   }
 }

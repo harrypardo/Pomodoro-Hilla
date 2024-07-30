@@ -3,17 +3,18 @@ import { STATIONS } from "./stations";
 import { StationListProps } from "./types";
 import { useState } from "react";
 
-
+import './stationlist.styles.scss';
 
 export default function StationList({ onChangeStation }: StationListProps) {
 
     const STATION_LIST = Object.keys(STATIONS);
     const [selected, setSelected] = useState(0);
-
+    
     return (<div>
 
         <Details summary="Stations" >
-            <ListBox selected={selected}
+            <ListBox selected={selected} 
+            className="detail-items"
                 onSelectedChanged={(e) => {
                     onChangeStation(STATIONS[STATION_LIST[e.detail.value]]);
                     setSelected(e.detail.value);

@@ -1,5 +1,5 @@
 
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 
 import PlayIcon from '../../assets/icons/play.png';
 import StopButton from '../../assets/icons/stop.png';
@@ -11,6 +11,7 @@ import { Station } from "./types";
 
 import './musicplayer.styles.scss';
 import Draggable from "react-draggable";
+import { DraggableContext } from "Frontend/views/@index";
 
 export default function MusicPlayer( ) {
 
@@ -27,9 +28,12 @@ export default function MusicPlayer( ) {
 
 
      const nodeRef = useRef(null);   
+
+    const dragContext = useContext(DraggableContext);
+
     return (
     
-    <Draggable nodeRef={nodeRef}>
+    <Draggable nodeRef={nodeRef} disabled={!dragContext?.isDraggable}>
     <div className="musicplayer-container" ref={nodeRef}>
 
             <img src={isPlaying ? StopButton : PlayIcon } 

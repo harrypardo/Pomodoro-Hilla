@@ -5,9 +5,11 @@
 // 1 pomodoro 1 study session (25 mins) & 1 short break, 
 // after 4 pomodoros = long break;
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Clock from "./Clock";
 import { is } from "date-fns/locale";
+import Draggable from "react-draggable";
+import { DraggableContext } from "Frontend/views/@index";
 
 export default function PomodoroClock() {
     const LONGBREAKS_EVERY = 2;
@@ -26,6 +28,8 @@ export default function PomodoroClock() {
     const [timer, setTimer] = useState(POMODORO_TIME);
 
 
+
+    const dragContext = useContext(DraggableContext);
 
     const checkCompletion = () => {
     
@@ -87,10 +91,11 @@ export default function PomodoroClock() {
     }
 
     return (
-
+        <Draggable disabled={!dragContext?.isDraggable}>
         <div>
             <h4>{returnTitle()}</h4>
             <Clock initialTime={timer} onTimerCompletion={checkCompletion} />
         </div>
+        </Draggable>
     );
 }

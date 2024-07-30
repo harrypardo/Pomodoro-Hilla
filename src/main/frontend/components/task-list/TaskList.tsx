@@ -2,7 +2,9 @@
 import { Button, Icon, TextField, TextFieldElement } from "@vaadin/react-components";
 
 import './tasklist.styles.scss';
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import Draggable from "react-draggable";
+import { DraggableContext } from "Frontend/views/@index";
 
 export default function TaskList() {
 
@@ -11,6 +13,7 @@ export default function TaskList() {
     const [taskValue, setTaskValue] = useState('');
     const textRef = useRef<TextFieldElement>(null);
 
+    const dragContext = useContext(DraggableContext);
 
     useEffect(() => {
         if (textRef.current) {
@@ -58,10 +61,13 @@ export default function TaskList() {
         </TextField>
         <Button onClick={onClickAddTask}
             className="add-button"
-            theme="primary">Add</Button>
+            ><Icon icon={'vaadin:plus-circle'}/></Button>
     </div>);
 
-    return (<div className="tasklist-container">
+    return (
+    
+    <Draggable disabled={!dragContext?.isDraggable}>
+    <div className="tasklist-container">
 
         <Header />
        <h4>Active:</h4>
@@ -97,5 +103,5 @@ export default function TaskList() {
             </li>)}
 
         </ul>
-    </div>);
+    </div></Draggable>);
 }
