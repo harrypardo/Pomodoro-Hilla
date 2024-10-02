@@ -89,7 +89,7 @@ export default function TaskList() {
       
 
              
-        <ul>
+        <ul className="completed-list">
             {completedItems.map((item, index) => 
             <li key={`${index}-c-todo-item`}
             className="completed-item"

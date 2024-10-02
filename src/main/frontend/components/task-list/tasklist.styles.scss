@@ -26,6 +26,10 @@
     >vaadin-button {
         cursor: pointer;
     }
+
+
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .completed-item {
@@ -34,6 +38,7 @@
         text-decoration: line-through;
         text-decoration-color: rgb(112, 27, 27);
     }
+
 }
 
 
@@ -41,4 +46,14 @@
     --lumo-font-family: Minecraft;
     font-family: Minecraft;
     position: absolute;
+
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 10px;
+    border-radius: 5px;
+
+    margin: 10px;
+}
+
+.completed-list {
+    list-style-type: none;
 }

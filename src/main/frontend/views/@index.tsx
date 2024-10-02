@@ -39,14 +39,14 @@ export default function HelloWorldView() {
     <>
 
     <DraggableContext.Provider value={{isDraggable, flipDraggable}}>
-      <section className="flex p-m gap-m items-end">
+      <div>
       <DragSetting />
         <BackgroundVid />      
         <MusicPlayer />
       <PomodoroClock />
         <TaskList />
      
-      </section>
+      </div>
       </DraggableContext.Provider>
     </>
   );

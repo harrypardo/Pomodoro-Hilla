@@ -8,9 +8,9 @@ export const STATIONS: StationsType = {
 
 
     LOFI_GIRL_MEDIEVAL: {
-        name: "Lofi Girl Medieval",
-        url: "https://www.youtube.com/watch?v=_uMuuHk_KkQ"},
+        name: "Asian Lofi Radio",
+        url: "https://www.youtube.com/watch?v=Na0w3Mz46GA"},
     GAME_CHOPS: {
         name: "Game Chops Video Game Study Lounge",
-        url:"https://www.youtube.com/watch?v=jgvWFbgJ5fY"}
+        url:"https://www.youtube.com/watch?v=34KOjUSdv50"}
 }

@@ -3,5 +3,10 @@
   position: relative; /* Required for proper dragging */
 
   --lumo-font-family: Minecraft;
+  width: 200px;
 
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 10px;
+    border-radius: 5px;
+  margin: 10px;
 }

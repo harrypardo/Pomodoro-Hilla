@@ -42,7 +42,7 @@ export default function MusicPlayer( ) {
             alt="play-button"
             onClick={onClickPlayButton}></img>
 
-            <StationList onChangeStation={onChangeStation}/>
+            <StationList onChangeStation={onChangeStation}  />
            
             <ReactPlayer
             key={stationKey}

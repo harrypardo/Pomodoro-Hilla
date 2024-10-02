@@ -7,9 +7,11 @@
 
 import { useContext, useEffect, useState } from "react";
 import Clock from "./Clock";
-import { is } from "date-fns/locale";
+
 import Draggable from "react-draggable";
 import { DraggableContext } from "Frontend/views/@index";
+
+import './pomodoroclock.styles.scss';
 
 export default function PomodoroClock() {
     const LONGBREAKS_EVERY = 2;
@@ -92,7 +94,7 @@ export default function PomodoroClock() {
 
     return (
         <Draggable disabled={!dragContext?.isDraggable}>
-        <div>
+        <div className="pomodoro-clock-container">
             <h4>{returnTitle()}</h4>
             <Clock initialTime={timer} onTimerCompletion={checkCompletion} />
         </div>

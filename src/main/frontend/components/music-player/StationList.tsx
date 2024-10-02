@@ -10,9 +10,9 @@ export default function StationList({ onChangeStation }: StationListProps) {
     const STATION_LIST = Object.keys(STATIONS);
     const [selected, setSelected] = useState(0);
     
-    return (<div>
+    return (<div className="detail-items">
 
-        <Details summary="Stations" >
+        <Details summary="Stations" className="stations-list">
             <ListBox selected={selected} 
             className="detail-items"
                 onSelectedChanged={(e) => {
